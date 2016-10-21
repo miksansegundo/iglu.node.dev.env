@@ -1,12 +1,11 @@
 # Use latest Node LTS (Boron)
 FROM node:6.9.1
 
-RUN npm install -g yarn
-RUN npm install -g mocha
-RUN npm install -g nodemon
-
-# Create a non-root user
-RUN groupadd -r nodejs && useradd -m -r -g nodejs nodejs
+# Dependencies & Create a non-root user
+RUN npm install -g yarn \
+ && npm install -g mocha \
+ && npm install -g nodemon \
+ && groupadd -r nodejs && useradd -m -r -g nodejs nodejs
 
 USER nodejs
 
