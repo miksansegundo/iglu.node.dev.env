@@ -1,28 +1,27 @@
 # Use latest Node LTS (Boron)
-FROM node:boron
+FROM node:6.9.1
 
 #RUN npm install -g yarn
 RUN npm i -g nodemon
 
 # Create a non-root user
-RUN groupadd -r nodejs \
-   && useradd -m -r -g nodejs nodejs
+RUN groupadd -r nodejs && useradd -m -r -g nodejs nodejs
 
 USER nodejs
 
 # Create the app folder inside the container
 RUN mkdir -p /home/nodejs/app
-WORKDIR /home/nodejs/app
 
-# Cache node_modules
-COPY ./app/package.json .
+# Install & cache node_modules
+WORKDIR /home/nodejs/app
+COPY ./package.json .
 RUN npm install
 
 # No install development dependencies
 # RUN npm install --production
 
 # Copy the app inside the container
-COPY ./app/ .
+COPY . .
 
 # One process by container
 # ADD https://github.com/Yelp/dumb-init/releases/download/v1.1.1/dumb-init_1.1.1_amd64 /usr/local/bin/dumb-init
