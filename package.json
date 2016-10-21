@@ -1,5 +1,5 @@
 {
-  "name": "iglu.node.dev.env",
+  "name": "Node Development Environment",
   "version": "0.0.0",
   "description": "Development environment for Node.js apps at Iglu.net",
   "main": "index.js",
