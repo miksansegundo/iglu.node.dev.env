@@ -7,8 +7,8 @@
 #   |  |  `-.  ||    ||  ''  |   #
 #   '--' .--'  | `---' `-----'   #
 #        '-----'                 #
-#    WHERE COOL THINGS HAPPEN    #
 #  .--------------------------.  #
+#    WHERE COOL THINGS HAPPEN    #
 
 # A Docker container to provide a development
 # environment for Node.js applications

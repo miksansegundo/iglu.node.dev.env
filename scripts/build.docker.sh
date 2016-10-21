@@ -7,14 +7,14 @@
 #   |  |  `-.  ||    ||  ''  |   #
 #   '--' .--'  | `---' `-----'   #
 #        '-----'                 #
-#    WHERE COOL THINGS HAPPEN    #
 #  .--------------------------.  #
+#    WHERE COOL THINGS HAPPEN    #
 
 # A Docker image to provide a development/production
 # environment for Node.js applications
 
-VERSION=0.0.0
+VERSION=0.0.1
 
 cd app/server/
 
-docker build -t iglu/node.dev.env:latest -t iglu/node.dev.env:${VERSION} .
+docker build -t miguelsansegundo/iglu:latest -t miguelsansegundo/iglu:${VERSION} .
