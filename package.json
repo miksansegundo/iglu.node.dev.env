@@ -1,0 +1,20 @@
+{
+  "name": "iglu.node.dev.env",
+  "version": "0.0.0",
+  "description": "Development environment for Node.js apps at Iglu.net",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/miksansegundo/iglu.node.dev.env.git"
+  },
+  "author": "miguelsansegundo@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/miksansegundo/iglu.node.dev.env/issues"
+  },
+  "homepage": "https://github.com/miksansegundo/iglu.node.dev.env#readme"
+}
