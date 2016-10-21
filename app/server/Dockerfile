@@ -40,7 +40,10 @@ CMD ["npm", "start"]
 # docker build -t miguelsansegundo/iglu.node.dev.env:latest -t miguelsansegundo/iglu.node.dev.env:0.0.0 .
 
 # Run the image
-# docker run --name iglu.node.dev.env -p 8888:8888 -e "NODE_ENV=development" -d miguelsansegundo/iglu.node.dev.env
+# docker run --name iglu.node.dev.env -p 8888:8888 -e "NODE_ENV=development" --rm iglu/node.dev.env
+
+# Pass command
+# docker run --rm iglu/iglu.node.dev.env /bin/bash -c 'npm test'
 
 # Access the container command line
 # docker exec -it iglu.node.dev.env /bin/bash
