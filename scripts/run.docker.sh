@@ -13,7 +13,7 @@
 # A Docker container to provide a development
 # environment for Node.js applications
 
-NAME="server.iglu"
+NAME="server.dev"
 
 ENV="NODE_ENV=development"
 
@@ -24,4 +24,4 @@ docker run -it --rm --name ${NAME} \
     -v /home/nodejs/app/node_modules `# Mount node_modules in host from the container` \
     -v $(pwd)/app/server:/home/nodejs/app `# Allow edition of the container app from host` \
     --network=app-net -p 8888:8888 \
-    iglu/node.dev.env
+    miguelsansegundo/iglu:latest
