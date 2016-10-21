@@ -1,8 +1,9 @@
 # Use latest Node LTS (Boron)
 FROM node:6.9.1
 
-#RUN npm install -g yarn
-RUN npm i -g nodemon
+RUN npm install -g yarn
+RUN npm install -g mocha
+RUN npm install -g nodemon
 
 # Create a non-root user
 RUN groupadd -r nodejs && useradd -m -r -g nodejs nodejs
@@ -37,10 +38,10 @@ CMD ["npm", "start"]
 # COMMANDS
 
 # Create the container
-# docker build -t miguelsansegundo/iglu.node.dev.env:latest -t miguelsansegundo/iglu.node.dev.env:0.0.0 .
+# docker build -t miguelsansegundo/iglu.node.dev.env:latest -t iglu/node.dev.env:0.0.0 .
 
 # Run the image
-# docker run --name iglu.node.dev.env -p 8888:8888 -e "NODE_ENV=development" --rm iglu/node.dev.env
+# docker run --name server.iglu -p 8888:8888 -e "NODE_ENV=development" --rm iglu/node.dev.env
 
 # Pass command
 # docker run --rm iglu/iglu.node.dev.env /bin/bash -c 'npm test'
