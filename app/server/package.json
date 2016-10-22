@@ -4,9 +4,10 @@
   "description": "Development environment for Node.js apps at Iglu.net",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Not yet!\" && exit 1",
+    "test": "echo \"Not yet!\" || true",
     "start": "nodemon ./src/index.js",
-    "lock": "npm shrinkwrap --dev"
+    "lock": "npm shrinkwrap --dev",
+    "lint": "standard --fix && standard && echo 'Good Standad code :)' || echo 'Not good Standad dode :('"
   },
   "repository": {
     "type": "git",

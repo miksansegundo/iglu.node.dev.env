@@ -5,6 +5,7 @@ FROM node:6.9.1
 RUN npm install -g yarn \
  && npm install -g mocha \
  && npm install -g nodemon \
+ && npm install -g standard \
  && groupadd -r nodejs && useradd -m -r -g nodejs nodejs
 
 USER nodejs
