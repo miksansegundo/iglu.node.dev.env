@@ -11,16 +11,20 @@
 #  .--------------------------.  #
 #    WHERE COOL THINGS HAPPEN    #
 ```
+
 # Node.js Development environment
 
-Created to develop JavaScript apps at Iglu.net
+Created for the development of JavaScript server apps using a micro-service
+oriented architecture at Iglu.net
 
 ## Features
 
-- Docker container port 8888
+- A docker container for each micro-service
+- A docker network to simulate the services communication 
+- Unique container for both environments, development and production
 - Latest Node LTS 6.9.1 (Boron)
 - Yarn and npm package managers installed globally
-- Mocha and Nodemon installed globally
-- Full edition of the app code in the host
-- Unique container for both development and production
-- In development mode the code is outside of the container
+- In development mode the app code is editable from the host
+but tested/run throw the container 
+- JavaScript Standard Style Lint
+- Public port 8888

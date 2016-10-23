@@ -1,9 +1,10 @@
 {
   "name": "iglu.node.dev.env",
   "version": "0.0.0",
-  "description": "Development environment for Node.js apps at Iglu.net",
+  "description": "Node.js Development environment for Express.js apps at Iglu.net",
   "main": "index.js",
   "scripts": {
+    "prepublish": "echo \"Compile with babel!\" || true",
     "test": "echo \"Not yet!\" || true",
     "start": "nodemon ./src/index.js",
     "lock": "npm shrinkwrap --dev",
@@ -20,6 +21,13 @@
   },
   "homepage": "https://github.com/miksansegundo/iglu.node.dev.env#readme",
   "dependencies": {
-    "express": "^4.13.3"
+    "axios": "^0.15.2",
+    "express": "^4.13.3",
+    "ramda": "^0.22.1"
+  },
+  "devDependencies": {
+    "mocha": "^3.1.2",
+    "nodemon": "^1.11.0",
+    "standard": "^8.4.0"
   }
 }
