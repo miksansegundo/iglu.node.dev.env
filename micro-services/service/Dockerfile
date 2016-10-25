@@ -3,6 +3,7 @@ FROM node:6.9.1
 
 # Dependencies & Create a non-root user
 RUN npm install -g yarn \
+ && npm install -g nodemon \
  && groupadd -r nodejs && useradd -m -r -g nodejs nodejs
 
 USER nodejs
@@ -30,5 +31,4 @@ RUN chmod +x /usr/local/bin/dumb-init
 # Application port
 EXPOSE 8888
 
-ENTRYPOINT ["dumb-init", "--"]
-CMD ["dumb-init", "node", "index.js"]
+CMD ["npm", "start"];

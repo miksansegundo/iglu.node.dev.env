@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 #  .--------------------------.  #
 #    __   _____  __    __  __    #
 #   |__| |     ||  |  |  ||  |   #
@@ -15,7 +16,7 @@
 
 VERSION=0.0.0
 
-cd app/server/
+cd micro-services/service/
 
 docker build -t miguelsansegundo/iglu:${VERSION} \
     -t miguelsansegundo/iglu:latest .

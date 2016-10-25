@@ -2,19 +2,23 @@
 
 The project uses a docker container for each micro-service.
 
-### Create a container
+### Using scripts to build and run the docker container
+Must be run from the root of the project. 
+
+#### Build container
+To deploy or share the latest version of the container. 
 ```
-docker build -t miguelsansegundo/iglu.node.dev.env:latest -t iglu/node.dev.env:0.0.0 .
+sh scripts/build.docker.sh
 ```
 
-### Run a image
+#### Run container
+To run the develop environment trough the container. 
+All the code is editable from the host because is read/run from the container.
+The node_modules folder is empty because is a reference mounted from 
+the container to enable the edition from the host.
+The installation of new modules must be done inside the container.
 ```
-docker run --name server.iglu -p 8888:8888 -e "NODE_ENV=development" --rm iglu/node.dev.env
-```
-
-### Pass a command to a container
-```
-docker run --rm iglu/iglu.node.dev.env /bin/bash -c 'npm test'
+sh scripts/run.docker.sh
 ```
 
 ### Access the container command line
