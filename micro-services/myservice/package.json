@@ -11,7 +11,7 @@
     "run.service": "dumb-init node index.js",
     "start": "sh scripts/run.service.sh",
     "lock": "npm shrinkwrap --dev",
-    "lint": "node_modules/.bin/standard --fix && node_modules/.bin/standard && echo 'Good Standad code :)' || echo 'Not good Standad dode :('",
+    "lint": "node_modules/.bin/standard --fix \"src/**/*.ts\" && echo 'Good Standad code :)' || echo 'Not good Standad dode :('",
     "build.docker": "sh ../../scripts/build.docker.sh",
     "run.docker": "sh ../../scripts/run.docker.sh",
     "bash.docker": "sh ../../scripts/bash.docker.sh",
