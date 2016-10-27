@@ -1,0 +1,17 @@
+{
+  "compileOnSave": false,
+  "filesGlob": [
+    "**/*.{ts,tsx}"
+  ],
+  "compilerOptions": {
+    "target": "es6",
+    "noImplicitAny": false,
+    "removeComments": false,
+    "preserveConstEnums": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true
+  },
+  "files": [
+    "src/index.ts"
+  ]
+}
