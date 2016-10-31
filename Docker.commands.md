@@ -6,16 +6,24 @@ The project uses a docker container for each micro-service.
 Must be run from the root of the project. 
 
 #### Building the container image
-Each time a new file is changed or added to the app a new building is needed
-to create the container image for the deployment or to share it with other 
-developers. Before run the command the version number must be updated in 
-the file **scripts/build.docker.sh**. All the modules in package.json will 
-be installed. All files of the package will be copied inside the container 
-in the folder **/home/nodejs/app**. The new image is tagged with the **latest** 
-and pushed to [https://hub.docker.com/r/miguelsansegundo/iglu](Docker hub repo). 
+Each time the apps improves with new bugs fixed (patch) or new funtionality 
+added (minor) a new version must be realeased increasing the semantic version 
+with the command:
 ```
-sh scripts/build.docker.sh
+npm version patch # for bugs fixed
+npm version minor # for new features added 
 ```
+Then a new building is needed to create the container image to deployment 
+or to share it with other developers using the command:
+```
+npm run build.docker # creates a new image tagged with latest version 
+
+```
+Using the Dockerfile all the modules in package.json will be installed. 
+All files will be copied inside the container in the folder **/home/nodejs/app**. 
+The new image has the name of the package and is tagged with version of the 
+package and the **latest** tag. Then is pushed to 
+[https://hub.docker.com/r/miguelsansegundo/iglu](Docker hub repo). 
 
 #### Running the container
 The development environment will be started trough the container running 

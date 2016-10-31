@@ -1,10 +1,10 @@
-# Use latest Node LTS (Boron)
-FROM node:6.9.1
+# Use latest Node
+FROM node:latest
 
 ARG npm_package_config_port
 ARG NODE_ENV
 
-ENV npm_package_config_port $npm_package_config_port
+ENV npm_package_config_port ${npm_package_config_port}
 
 # Dependencies & Create a non-root user
 RUN npm install -g yarn \

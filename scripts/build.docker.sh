@@ -28,4 +28,4 @@ docker build \
     -t miguelsansegundo/iglu.${npm_package_name}:latest .
 
 # Push new container to Docker Hub repository
-#docker push miguelsansegundo/iglu.${npm_package_name}:${npm_package_version}
+docker push miguelsansegundo/iglu.${npm_package_name}:${npm_package_version}
