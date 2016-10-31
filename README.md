@@ -22,7 +22,7 @@ oriented architecture at Iglu.net
 - A docker container for each micro-service
 - A docker network to simulate the services communication 
 - Unique container for both environments, development and production
-- Latest Node LTS 6.9.1 (Boron)
+- Latest Node 6.7
 - Yarn and npm package managers installed globally
 - In development mode the app code is editable from the host
 but tested/run throw the container 
