@@ -1,5 +1,5 @@
 # Use latest Node
-FROM node:latest
+FROM mhart/alpine-node:latest
 
 ARG npm_package_config_port
 ARG NODE_ENV

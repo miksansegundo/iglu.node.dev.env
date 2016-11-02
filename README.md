@@ -22,7 +22,7 @@ oriented architecture at Iglu.net
 - A docker container for each micro-service
 - A docker network to simulate the services communication 
 - Unique container for both environments, development and production
-- Latest Node 6.7
+- Latest Node version with Alpine Linux
 - Yarn and npm package managers installed globally
 - In development mode the app code is editable from the host
 but tested/run throw the container 
